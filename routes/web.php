@@ -22,7 +22,17 @@ Route::get('/productos', function () {
             'nombre' => 'Miel pura',             
             'precio' => 3200,             
             'stock' => 0,         
-            ],     
+            ],
+        [             
+            'nombre' => 'Ramen', 
+            'precio' => 1500,             
+            'stock' => 10,         
+            ], 
+        [             
+            'nombre' => 'Miller', 
+            'precio' => 4500,             
+            'stock' => 12,         
+            ],          
         ];      
             
         return view('productos', [         
@@ -36,4 +46,8 @@ Route::get('/contacto', function () {
     return view('contacto', [         
         'email' => $email,     
     ]); 
+
 }); 
+Route::get('/nosotros', function () {     
+    return view('nosotros'); 
+    });  

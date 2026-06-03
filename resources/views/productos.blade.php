@@ -8,15 +8,18 @@
      @forelse($productos as $producto) 
      <div class="productos">
         <h3>{{ $producto['nombre'] }}</h3>
+        @if($producto['precio'] > 3000) 
+        <p>Producto destacado</p> 
+        @endif 
 
         <p>Precio: ${{ $producto['precio'] }}</p> 
         @if($producto['stock'] > 0)
          <p class="con-stock">Stock disponible: {{ $producto['stock'] }}</p> 
 
-        @else <p class="sin-stock">Sin stock</p> 
+        @else <p class="sin-stock">Ndarecoi</p> 
         @endif
      </div> 
      @empty 
-        <p>No hay productos cargados.</p> 
+        <p>Ndarecoy la cerveza</p> 
      @endforelse 
 @endsection
